@@ -26,6 +26,9 @@ xlorentz speed x t = (gamma speed) * (x + speed * t)
 tlorentz :: Float -> Float -> Float -> Float           -- Does a Lorentz tranformation for the time.
 tlorentz speed x t = (gamma speed) * (t + speed * x)
 
+vlorentz :: Float -> Float -> Float
+vlorentz v w = (v - w) / (1 - (v * w))
+
 lorentz :: Float -> Float -> Float -> String                                                         -- Does a lorentz tranformation for both space and time.
 lorentz speed x t = "x'=" ++ (show (xlorentz speed x t)) ++ "   t'=" ++ (show (tlorentz speed x t))
 

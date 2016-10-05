@@ -15,10 +15,10 @@
   (gamma (float (metertoc v))))
 
 (defn xlorentz [speed x t]  ;; Does a lorentz transformation for space
-  (* (gamma speed) (+ x (* speed t))))
+  (* (gamma speed) (- x (* speed t))))
 
 (defn tlorentz [speed x t]  ;; Does a lorentz transformation for time
-  (* (gamma speed) (+ t (* speed x))))
+  (* (gamma speed) (- t (* speed x))))
 
 (defn vlorentz [v w]  ;; Lorentz transformation for velocity
   (/ (- v w) (- 1 (* v w))))

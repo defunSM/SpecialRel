@@ -19,10 +19,10 @@ def ctogamma(v):  # Calculates the value of gamma based on the speed in terms of
     return float(gamma(metertoc(v)))
 
 def xlorentz(speed, x, t):  # Calculates the lorentz transformation for space.
-    return float(gamma(speed) * (x + speed * t))
+    return float(gamma(speed) * (x - speed * t))
 
 def tlorentz(speed, x, t):  # Calculates the lorentz transformation for time.
-    return float(gamma(speed) * (t + speed * x))
+    return float(gamma(speed) * (t - speed * x))
 
 def vlorentz(v, w):  # Calculates the lorentz transformation for velocity.
     return float((v - w) / (1 - (v * w)))

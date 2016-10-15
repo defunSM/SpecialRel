@@ -36,4 +36,4 @@
   (/ h (gamma v)))
 
 (defn spacetimeinterval [x t] ;; calculates the spacetime interval given the space and time in meters.
-  (Math/sqrt (+ (* x x) (* t t))))
+  (Math/sqrt (- (* t t) (* x x))))

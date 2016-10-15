@@ -34,7 +34,7 @@ def lengthcontraction(v, h):   # Calculates the length contraction based on the 
     return float(h / (gamma(v)))
 
 def spacetimeinterval(x, t):   # Calculates the spacetime interval based on the space and time.
-    return float(math.sqrt((x**2) + (t**2)))
+    return float(math.sqrt((t**2) -(x**2))))
 
 if __name__=="__main__":
     main()

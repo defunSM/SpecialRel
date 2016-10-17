@@ -38,5 +38,14 @@ timedialation v t = ((gamma v) * t)
 lengthcontraction :: Float -> Float -> Float         -- Calculates the length contraction based on the speed in terms of c and the length.
 lengthcontraction v h = (h / (gamma v))
 
+timeinterval :: Float -> Float -> Float
+timeinterval t1 t2 = t2 - t1
+
+spaceinterval :: Float -> Float -> Float
+spaceinterval x1 x2 = x2 - x1
+
 spacetimeinterval :: Float -> Float -> Float         -- Calculates the space time interval. c = 1
 spacetimeinterval x t = (sqrt ((t ^ 2) - (x ^ 2)))
+
+spacetimeinterval2 :: Float -> Float -> Float -> Float -> Float
+spacetimeinterval2 t1 t2 x1 x2 = (sqrt ((timeinterval t1 t2) ^ 2) - ((spaceinterval x1 x2) ^ 2))

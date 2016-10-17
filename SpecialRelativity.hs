@@ -21,10 +21,10 @@ ctogamma :: Float -> Float                -- Calculates the gamma taking the spe
 ctogamma v = (gamma (metertoc v))
 
 xlorentz :: Float -> Float -> Float -> Float          -- Does a lorentz transformation for the space.
-xlorentz speed x t = (gamma speed) * (x - (speed * t)
+xlorentz speed x t = (gamma speed) * (x - (speed * t))
 
 tlorentz :: Float -> Float -> Float -> Float           -- Does a Lorentz tranformation for the time.
-tlorentz speed x t = (gamma speed) * (t - speed * x)
+tlorentz speed x t = (gamma speed) * (t - (speed * x))
 
 vlorentz :: Float -> Float -> Float      -- Does a Lorentz transformation for Velocity (GENERAL)
 vlorentz v w = (v - w) / (1 - (v * w))

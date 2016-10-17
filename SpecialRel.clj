@@ -37,3 +37,12 @@
 
 (defn spacetimeinterval [x t] ;; calculates the spacetime interval given the space and time in meters.
   (Math/sqrt (- (* t t) (* x x))))
+
+(defn spaceinterval [x1 x2]
+  (- x2 x1))
+
+(defn timeinterval [t1 t2]
+  (t2 - t1))
+
+(defn spacetimeinterval2 [t1 t2 x1 x2]
+  (Math/sqrt (- (Math/pow (- t2 t1) 2) (Math/pow (- x2 x1) 2))))

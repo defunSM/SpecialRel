@@ -11,4 +11,6 @@ A small Haskell/Clojure/Python Library of Special Relativity functions for lengt
 - Velocity lorentz transformation
 - Time dialation
 - Length Contraction
+- Time Interval
+- Space Interval
 - SpaceTime Interval

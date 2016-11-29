@@ -46,3 +46,15 @@
 
 (defn spacetimeinterval2 [t1 t2 x1 x2]
   (Math/sqrt (- (Math/pow (- t2 t1) 2) (Math/pow (- x2 x1) 2))))
+
+(def planck-constant 6.626e-34)
+
+(def mass-of-proton 1.67e-27)
+
+(defn energy [wavelength]
+  (/ (* planck-constant c)
+     wavelength))
+
+(defn rel-momentum [p m]
+  (Math/sqrt (/ (Math/pow (/ p m) 2)
+                (+ 1 (/ (Math/pow (/ p m) 2) 1)))))

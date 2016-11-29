@@ -51,6 +51,14 @@
 
 (def mass-of-proton 1.67e-27)
 
+(def mass-of-electron 9.1e-31)
+
+(def elementary-charge 1.602e-19)
+
+(def electron-volt-per-c-square-in-kg 1.783e-36)
+
+(def amu 1.66e-27)
+
 (defn energy [wavelength]
   (/ (* planck-constant c)
      wavelength))

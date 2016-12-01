@@ -66,3 +66,25 @@
 (defn rel-momentum [p m]
   (Math/sqrt (/ (Math/pow (/ p m) 2)
                 (+ 1 (/ (Math/pow (/ p m) 2) 1)))))
+
+(def gamma-factor (gamma 0.5))
+
+(def mass 0.2)
+
+(def velocity 0.5)
+
+(def total-momentum (* gamma-factor mass velocity))
+
+(def total-energy (* gamma-factor mass (Math/pow c 2)))
+
+(defn rest-energy [total-energy total-momentum]
+  (Math/sqrt (- (/ (Math/pow total-energy 2) (Math/pow c 4)) (/ (Math/pow total-momentum 2) (Math/pow c 2)))))
+
+(rest-energy total-energy total-momentum)
+
+total-momentum
+total-energy
+
+(defn )
+
+(* (gamma (metertoc 40)) 0.2 (metertoc 40))

@@ -3,7 +3,6 @@ import optparse
 
 import SpecialRel as sprl
 import matplotlib.pyplot as plt
-import mpl_toolkits.axisartist as AA
 import numpy as np
 
 def time_of_the_object(v, b, x):
@@ -42,7 +41,7 @@ def retrieve_xcoords(data):
     return x_axis_coord
 
 
-def space_time_graph(data):
+def space_time_graph(data, name_of_object="object"):
 
     x = retrieve_xcoords(data)
     y = retrieve_ycoords(data)
@@ -52,12 +51,18 @@ def space_time_graph(data):
     # Create a list of values in the best fit line
     abline_values = [slope * i + intercept for i in x]
 
+
+    plt.axhline(linewidth=2, color='black')
+    plt.axvline(linewidth=2, color='black')
+
     # Plot the best fit line over the actual values
     plt.ylabel('Time (s)')
     plt.xlabel('Space (m)')
     plt.grid(True)
-    plt.plot(x, y, '--', label='object')
+    plt.plot(x, y, '--', label=name_of_object)
     plt.legend(loc='upper left')
+
+    plt.axis('tight')
 
     # plt.plot(x, abline_values, 'b')
     plt.title("SpaceTime Graph")
@@ -73,6 +78,9 @@ def main():
     p.add_option('--intercept', '-b', default=0)
     p.add_option('--upperlimit', '-u', default=11)
     p.add_option('--lowerlimit', '-l', default=-11)
+    p.add_option('--objectname', '-n', default="object")
+    p.add_option('--gammafactor', '-g', default=1)
+
 
     options, arguments = p.parse_args()
 
@@ -80,10 +88,11 @@ def main():
     b = float(options.intercept)
     ul = float(options.upperlimit)
     ll = float(options.lowerlimit)
+    n = options.objectname
 
     data = given_velocity_and_initial_position(v, b, ul, ll)
 
-    space_time_graph(data)
+    space_time_graph(data, n)
 
 
 

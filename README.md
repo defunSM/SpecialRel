@@ -1,6 +1,8 @@
 # SpecialRel
 A small Haskell/Clojure/Python/C++ Library of Special Relativity functions for length contraction, time dialation, spacetime interval, lorentz transformations and etc.
 
+The overall purpose of this is supposed to be able to generate SpaceTime graphs as well as being able to perform various lorentz transformations. This is also meant as an exercise to use numpy and matplotlib. Using both to generate graphs to help visual possible situations in special relativity.
+
 ![graph](http://i.imgur.com/D1D9NYw.png)
 
 ## Includes

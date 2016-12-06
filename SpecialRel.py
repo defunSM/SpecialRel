@@ -52,6 +52,9 @@ def totalenergy(m, v):
     gamma_factor = gamma(v)
     return float(gamma_factor * m * 3e16)
 
+def totalmomentum(m, v):
+    gamma_factor = gamma(v)
+    return float(gamma_factor * m * v)
 
 
 if __name__=="__main__":
